@@ -1,0 +1,7 @@
+Las fotos de esta demo se cargan desde Unsplash (licencia gratuita de Unsplash).
+Para dejarlas dentro de esta carpeta, descargalas de estos links y reemplazá las direcciones en index.html por img/nombre.jpg:
+
+Portada: https://unsplash.com/photos/AmFj7Xn9x_k (Portafolio fotográfico automotriz)
+Compacto: https://unsplash.com/photos/bC5NNbwuoB0 (Crosby Hinze)
+Sedán: https://unsplash.com/photos/rrSciOzApfc (Myron Mott)
+SUV: https://unsplash.com/photos/gvMsGzkx8eM (Vlad Kutepov)

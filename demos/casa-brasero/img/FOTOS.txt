@@ -1,0 +1,5 @@
+Las fotos de esta demo se cargan desde Unsplash (licencia gratuita de Unsplash).
+Para dejarlas dentro de esta carpeta, descargalas de estos links y reemplazá las direcciones en index.html por img/nombre.jpg:
+
+Portada: https://unsplash.com/photos/Q_X0T0E0IyU (Alexander Faé)
+Reservas: https://unsplash.com/photos/Vr6Su7dd2qs (Stu Moffat)

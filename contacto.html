@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contacto — Metheris Studios</title>
+<meta name="description" content="Contanos tu proyecto por WhatsApp, mail o formulario.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700;800&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contacto">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 304 350"><path d="M152 0L178.25 129.534L303.554 87.5L204.5 175L303.554 262.5L178.25 220.466L152 350L125.75 220.466L0.445557 262.5L99.5 175L0.445557 87.5L125.75 129.534L152 0Z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 4.8 5-1.3A9.8 9.8 0 1 0 12 2.2zm0 1.8a8 8 0 1 1-4.2 14.8l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4zm-3.3 4c-.2 0-.5 0-.7.3-.3.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3l-1.9-.9c-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.5z"/></symbol>
+</svg>
+
+<svg class="star-cursor" id="star-cursor" aria-hidden="true"><use href="#star"/></svg>
+
+<header class="header" id="header">
+  <div class="wrap header__bar">
+    <a class="brand" href="index.html" aria-label="Metheris Studios, inicio"><svg aria-hidden="true"><use href="#star"/></svg><span>metheris</span><span class="cur" aria-hidden="true"></span></a>
+    <nav class="nav" aria-label="Principal">
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="servicios.html" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="contacto.html" aria-current="page" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" data-i18n="nav.menu">menú_</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="tag" data-i18n="ct.tag">// contacto</span>
+      <h1 class="page-hero__word" aria-label="Hablemos"><span data-i18n="ct.word">hablemos</span><span class="cur" aria-hidden="true"></span></h1>
+      <div class="page-hero__row">
+        <p class="lead" data-i18n="ct.lead">Contanos tu proyecto. Te respondemos por el medio que elijas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: clamp(40px, 5vw, 72px)">
+    <div class="wrap contact-grid">
+      <aside class="contact-card">
+        <p class="contact-card__big" data-i18n="ct.big">Escribinos.</p>
+        <p data-i18n="ct.card.p">La forma más rápida es WhatsApp. Si preferís, completá el formulario y la consulta llega directo a nuestro mail.</p>
+        <div class="contact-list">
+          <a class="contact-item" href="https://wa.me/59898100017" data-wa="general" target="_blank" rel="noopener"><span><small>WhatsApp</small><strong>+598 98 100 017</strong></span><span aria-hidden="true">→</span></a>
+          <a class="contact-item" href="mailto:metherisstudios@gmail.com"><span><small>Mail</small><strong>metherisstudios@gmail.com</strong></span><span aria-hidden="true">→</span></a>
+        </div>
+      </aside>
+
+      <form class="form" id="contact-form" novalidate>
+        <div class="form__row">
+          <div class="field"><label for="f-nombre" data-i18n="f.name">Nombre</label><input id="f-nombre" name="nombre" autocomplete="given-name" data-i18n-ph="f.name.ph" placeholder="Tu nombre"><span class="field__err" aria-live="polite"></span></div>
+          <div class="field"><label for="f-apellido" data-i18n="f.last">Apellido</label><input id="f-apellido" name="apellido" autocomplete="family-name" data-i18n-ph="f.last.ph" placeholder="Tu apellido"><span class="field__err" aria-live="polite"></span></div>
+        </div>
+        <div class="form__row">
+          <div class="field"><label for="f-email" data-i18n="f.email">Mail</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com"><span class="field__err" aria-live="polite"></span></div>
+          <div class="field"><label for="f-tel" data-i18n="f.phone">Teléfono</label><input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="099 123 456"><span class="field__err" aria-live="polite"></span></div>
+        </div>
+        <fieldset class="field" style="border:0;padding:0;margin:0">
+          <legend data-i18n="f.pkg" style="padding:0;margin-bottom:7px;font-family:var(--font-display);font-size:12.5px;font-weight:700">¿Qué te interesa?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="paquete" id="p-basica" value="Landing Básica"><span>Básica</span></label>
+            <label class="chip"><input type="radio" name="paquete" id="p-estandar" value="Landing Estándar"><span>Estándar</span></label>
+            <label class="chip"><input type="radio" name="paquete" id="p-plus" value="Landing Plus"><span>Plus</span></label>
+            <label class="chip"><input type="radio" name="paquete" id="p-medida" value="A medida"><span data-i18n="f.custom">A medida</span></label>
+            <label class="chip"><input type="radio" name="paquete" id="p-nose" value="Todavía no sé" checked><span data-i18n="f.unsure">No sé todavía</span></label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="f-msg" data-i18n="f.msg">Tu proyecto</label><textarea id="f-msg" name="mensaje" data-i18n-ph="f.msg.ph" placeholder="Contanos de tu negocio y qué necesitás"></textarea><span class="field__err" aria-live="polite"></span></div>
+        <div class="form__foot">
+          <button class="btn btn--solid" type="submit" id="f-send"><span data-i18n="f.send">Enviar mensaje</span><span aria-hidden="true">→</span></button>
+          <span class="form__status" id="f-status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html"><svg aria-hidden="true"><use href="#star"/></svg><span>metheris</span><span class="cur" aria-hidden="true"></span></a>
+        <div class="footer__sub">// studios</div>
+      </div>
+      <div>
+        <h4 data-i18n="foot.pages">PÁGINAS</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+          <li><a href="servicios.html" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+          <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot.plans">PAQUETES</h4>
+        <ul>
+          <li><a href="servicios.html#basica">Landing Básica</a></li>
+          <li><a href="servicios.html#estandar">Landing Estándar</a></li>
+          <li><a href="servicios.html#plus">Landing Plus</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot.contact">CONTACTO</h4>
+        <ul>
+          <li><a href="mailto:metherisstudios@gmail.com">metherisstudios@gmail.com</a></li>
+          <li><a href="https://wa.me/59898100017" data-wa="general" target="_blank" rel="noopener">WhatsApp +598 98 100 017</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 Metheris Studios</span><span data-i18n="foot.made">// escrito línea por línea</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/59898100017" data-wa="general" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

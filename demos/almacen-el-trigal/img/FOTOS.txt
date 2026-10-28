@@ -1,0 +1,4 @@
+La foto de portada de esta demo se carga desde Unsplash (licencia gratuita de Unsplash).
+Para dejarla dentro de esta carpeta, descargala de este link y reemplazá la dirección en index.html por img/portada.jpg:
+
+Portada: https://unsplash.com/photos/stpjHJGqZyw (Gemma C)

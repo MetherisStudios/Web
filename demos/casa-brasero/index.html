@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa Brasero · Parrilla & cocina en Atlántida</title>
+  <meta name="description" content="Parrilla a leña en Atlántida. Mirá la carta, armá tu pedido para llevar o con envío y reservá tu mesa por WhatsApp.">
+  <meta name="theme-color" content="#1a1412">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Pantalla de entrada -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <img class="intro__mark" src="img/logo.svg" alt="">
+      <div class="intro__name">Casa Brasero</div>
+      <div class="intro__tag">Parrilla & cocina</div>
+      <div class="intro__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="demo-bar" role="note">
+      <div class="container">
+        <p class="demo-bar__msg"><span class="demo-bar__tag">Demo</span><span class="demo-bar__txt"><span class="demo-bar__largo">Casa Brasero es un comercio ficticio: precios, envíos y datos son inventados.</span><span class="demo-bar__corto">Comercio ficticio, datos inventados</span></span></p>
+        <a href="../../index.html#demos">← <span class="demo-bar__largo">Volver a </span>Metheris</a>
+      </div>
+    </div>
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Casa Brasero, ir al inicio">
+        <img class="brand__mark" src="img/logo.svg" alt="">
+        <span class="brand__name">Casa Brasero<small>Parrilla & cocina</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#carta">Carta</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#visitanos">Visitanos</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--wa btn--sm" data-wa="Hola, quiero hacer una consulta."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg> WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg"><img src="https://images.unsplash.com/photo-1571162242324-f1607b1eceaa?auto=format&fit=crop&w=1800&q=70" alt="Carne a la parrilla servida sobre tabla de madera"></div>
+      <div class="container">
+        <div class="hero__content">
+          <span class="eyebrow">Parrilla a leña · Atlántida</span>
+          <h1>Fuego lento,<br>carne de verdad.</h1>
+          <p class="hero__lead">Cortes a la parrilla, platos caseros y postres de la casa. Comé acá, llevalo a tu casa o pedilo con envío.</p>
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#carta">Ver la carta</a>
+            <a class="btn btn--ghost" href="#reservas">Reservá tu mesa</a>
+          </div>
+          <div class="hero__facts">
+            <div><strong>Parrilla a leña</strong>Todos los cortes</div>
+            <div><strong>Para llevar y envío</strong>Pedí por WhatsApp</div>
+            <div><strong>Reservas</strong>Mediodía y noche</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carta + pedido -->
+    <section class="section" id="carta">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">La carta</span>
+          <h2>Elegí, sumá y pedí</h2>
+          <p>Tocá + en lo que quieras y armá tu pedido. Te confirmamos el total y la demora por WhatsApp.</p>
+        </div>
+        <div class="menu-layout">
+          <div class="menu reveal">
+            <div class="tabs" role="tablist" aria-label="Categorías de la carta">
+              <button class="tab" role="tab" aria-selected="true" data-tab="parrilla">Parrilla</button>
+              <button class="tab" role="tab" aria-selected="false" data-tab="platos">Al plato</button>
+              <button class="tab" role="tab" aria-selected="false" data-tab="guarniciones">Guarniciones</button>
+              <button class="tab" role="tab" aria-selected="false" data-tab="postres">Postres</button>
+            </div>
+            <ul class="menu__list" data-menu></ul>
+          </div>
+
+          <aside class="order reveal" aria-label="Tu pedido">
+            <div class="order__head">
+              <h3>Tu pedido</h3>
+              <span class="order__count" data-pedido-cantidad>0 ítems</span>
+            </div>
+            <ul class="order__list" data-pedido-lista>
+              <li class="order__empty">Todavía no sumaste nada. Elegí de la carta.</li>
+            </ul>
+            <div class="order__total"><span>Total estimado</span><strong data-pedido-total>$ 0</strong></div>
+            <div class="order__mode" role="group" aria-label="Forma de entrega">
+              <button class="choice" type="button" aria-pressed="true" data-entrega="retiro">Retiro en el local</button>
+              <button class="choice" type="button" aria-pressed="false" data-entrega="envio">Envío a domicilio</button>
+            </div>
+            <div class="order__address" data-direccion hidden>
+              <label for="p-direccion">Dirección de entrega</label>
+              <input id="p-direccion" type="text" placeholder="Calle, número y una referencia" maxlength="120">
+              <small>El costo del envío depende de la zona y te lo confirmamos por WhatsApp.</small>
+            </div>
+            <button class="btn btn--wa btn--block" type="button" data-pedido-enviar disabled>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg>
+              Enviar pedido por WhatsApp
+            </button>
+            <p class="order__note">Los precios pueden variar. El total final te lo confirmamos antes de prepararlo.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservas -->
+    <section class="section reserve" id="reservas">
+      <div class="container reserve__grid">
+        <div class="reserve__text reveal">
+          <span class="eyebrow">Reservas</span>
+          <h2>Guardamos tu mesa</h2>
+          <p>Elegí el día, el turno y cuántos van a ser. Te llega el pedido armado por WhatsApp y te confirmamos la mesa en el momento.</p>
+          <ul class="reserve__points">
+            <li>Mediodía de martes a domingo</li>
+            <li>Noches con parrilla encendida hasta tarde</li>
+            <li>Avisanos si es un cumpleaños o si necesitan silla para bebé</li>
+          </ul>
+          <img class="reserve__img" src="https://images.unsplash.com/photo-1628497622880-896ed64d6034?auto=format&fit=crop&w=1000&q=70" alt="Corte de carne a la parrilla en rodajas" loading="lazy">
+        </div>
+        <form class="reserve__form reveal" data-reserva novalidate>
+          <div class="field">
+            <label for="r-fecha">Día</label>
+            <input id="r-fecha" type="date" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <span class="label">Turno</span>
+            <div class="choices" role="group" aria-label="Turno">
+              <button class="choice" type="button" aria-pressed="false" data-turno="mediodia">Mediodía</button>
+              <button class="choice" type="button" aria-pressed="false" data-turno="noche">Noche</button>
+            </div>
+            <span class="field__error" data-error-turno aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="r-hora">Hora</label>
+            <select id="r-hora" disabled><option value="">Primero elegí el turno</option></select>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <span class="label">Personas</span>
+            <div class="stepper">
+              <button type="button" aria-label="Una persona menos" data-personas="-1">−</button>
+              <output data-personas-valor>2</output>
+              <button type="button" aria-label="Una persona más" data-personas="1">+</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="r-nombre">A nombre de</label>
+            <input id="r-nombre" type="text" autocomplete="name" maxlength="40" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="r-nota">Comentario (opcional)</label>
+            <input id="r-nota" type="text" maxlength="120" placeholder="Cumpleaños, silla para bebé, mesa afuera…">
+          </div>
+          <button class="btn btn--wa btn--block" type="submit">Pedir la reserva por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Visitanos -->
+    <section class="section section--alt" id="visitanos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Visitanos</span>
+          <h2>Te esperamos en Atlántida</h2>
+          <p>Salón con parrilla a la vista, a pocas cuadras de la rambla. Si venís en grupo, avisanos antes y te armamos la mesa.</p>
+        </div>
+        <div class="visit">
+          <div class="visit__info reveal">
+            <h3>Casa Brasero</h3>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Dirección</strong><span>Atlántida, Canelones</span></div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <div>
+                <strong>Horarios</strong>
+                <ul class="hours" data-horarios></ul>
+                <span class="status" data-estado></span>
+              </div>
+            </div>
+            <div class="visit__actions">
+              <a class="btn btn--accent" href="https://www.google.com/maps/dir/?api=1&destination=Atl%C3%A1ntida%2C+Canelones%2C+Uruguay" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 19-9-9 19-2-8-8-2Z"/></svg> Cómo llegar</a>
+              <a class="btn btn--line" data-wa="Hola, vamos para allá. ¿Tienen lugar ahora?"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg> Avisanos que venís</a>
+            </div>
+          </div>
+          <div class="map reveal">
+            <iframe title="Mapa de Atlántida, Canelones" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Atl%C3%A1ntida%2C+Canelones%2C+Uruguay&z=14&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2>¿Tenés una consulta o un evento?</h2>
+          <p>Para pedidos y reservas, lo más rápido es WhatsApp. Para eventos, cumpleaños o consultas generales, escribinos acá.</p>
+        </div>
+        <div class="contact">
+          <div class="contact__cards reveal">
+            <a class="contact-card contact-card--wa" data-wa="Hola, quiero hacer una consulta.">
+              <span class="contact-card__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg></span>
+              <span><strong>WhatsApp</strong><span>La forma más rápida de hablarnos</span></span>
+            </a>
+            <a class="contact-card" data-tel>
+              <span class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+              <span><strong data-tel-texto></strong><span>Llamanos en horario de atención</span></span>
+            </a>
+            <a class="contact-card" data-mail>
+              <span class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+              <span><strong>Correo</strong><span data-mail-texto></span></span>
+            </a>
+          </div>
+
+          <form class="form reveal" id="form-contacto" novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="f-nombre">Nombre</label>
+                <input id="f-nombre" name="Nombre" type="text" autocomplete="given-name" data-regla="nombre" maxlength="40" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-apellido">Apellido</label>
+                <input id="f-apellido" name="Apellido" type="text" autocomplete="family-name" data-regla="apellido" maxlength="40" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-correo">Correo electrónico</label>
+                <input id="f-correo" name="Correo electrónico" type="email" autocomplete="email" data-regla="correo" maxlength="80" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-telefono">Teléfono</label>
+                <input id="f-telefono" name="Teléfono" type="tel" autocomplete="tel" inputmode="tel" data-regla="telefono" maxlength="20" placeholder="099 123 456" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field field--full">
+                <label for="f-tipo">Tipo de consulta</label>
+                <select id="f-tipo" name="Tipo de consulta" data-regla="tipo" required>
+                  <option value="">Elegí una opción</option>
+                  <option>Evento o cumpleaños</option>
+                  <option>Reserva para grupo grande</option>
+                  <option>Pedido para empresa</option>
+                  <option>Otra consulta</option>
+                </select>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field field--full">
+                <label for="f-mensaje">Mensaje</label>
+                <textarea id="f-mensaje" name="Mensaje" data-regla="mensaje" maxlength="1000" required></textarea>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+            </div>
+            <label class="hp" aria-hidden="true"><input type="checkbox" name="botcheck" tabindex="-1"></label>
+            <div class="form__foot">
+              <p class="form__note">Te respondemos al correo que nos dejes.</p>
+              <button class="btn btn--accent" type="submit">Enviar consulta</button>
+            </div>
+            <div class="form__status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="#inicio">
+            <img class="brand__mark" src="img/logo.svg" alt="">
+            <span class="brand__name">Casa Brasero<small>Parrilla & cocina</small></span>
+          </a>
+          <p>Parrilla a leña y cocina casera. Para comer acá, para llevar o con envío.</p>
+        </div>
+        <div>
+          <h4>Secciones</h4>
+          <ul><li><a href="#carta">Carta</a></li><li><a href="#reservas">Reservas</a></li><li><a href="#visitanos">Visitanos</a></li><li><a href="#contacto">Contacto</a></li></ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a data-wa="Hola, quiero hacer una consulta.">WhatsApp</a></li>
+            <li><a data-mail></a></li>
+            <li>Atlántida, Canelones</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__demo">
+        <span class="footer__demo-tag">Proyecto de muestra</span>
+        Casa Brasero es un comercio ficticio: el nombre, el logo, los precios y los datos son inventados para mostrar el trabajo de
+        <a href="mailto:metherisstudios@gmail.com">Metheris Studios</a>. El WhatsApp y el formulario llegan a Metheris Studios.
+        Fotos de Unsplash (Alexander Faé, Stu Moffat). © <span data-anio></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa="Hola, quiero hacer una consulta." aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

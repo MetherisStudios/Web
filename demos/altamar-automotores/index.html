@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es-UY">
+<head>
+  <meta name="robots" content="noindex">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altamar Automotores · Autos usados en Ciudad de la Costa</title>
+  <meta name="description" content="Autos usados seleccionados en Ciudad de la Costa. Financiación bancaria o de la casa y tu usado como parte de pago.">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Pantalla de entrada -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <img class="intro__mark" src="img/logo.svg" alt="">
+      <div class="intro__name">Altamar Automotores</div>
+      <div class="intro__tag">Autos usados</div>
+      <div class="intro__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="demo-bar" role="note">
+      <div class="container">
+        <p class="demo-bar__msg"><span class="demo-bar__tag">Demo</span><span class="demo-bar__txt"><span class="demo-bar__largo">Altamar Automotores es un comercio ficticio: precios, envíos y datos son inventados.</span><span class="demo-bar__corto">Comercio ficticio, datos inventados</span></span></p>
+        <a href="../../index.html#demos">← <span class="demo-bar__largo">Volver a </span>Metheris</a>
+      </div>
+    </div>
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Altamar Automotores, ir al inicio">
+        <img class="brand__mark" src="img/logo.svg" alt="">
+        <span class="brand__name">Altamar Automotores<small>Autos usados</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#autos">Autos</a>
+        <a href="#asistente">¿Cuál me conviene?</a>
+        <a href="#financiacion">Financiación</a>
+        <a href="#visitanos">Visitanos</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--wa btn--sm" data-wa="Hola, quiero consultar por un auto."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg> WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg"><img src="https://images.unsplash.com/photo-1777175013302-eaf4b3ef785a?auto=format&fit=crop&w=1800&q=70" alt="Autos estacionados dentro de un salón de ventas"></div>
+      <div class="container">
+        <div class="hero__content">
+          <span class="eyebrow">Usados seleccionados · Ciudad de la Costa</span>
+          <h1>Tu próximo auto, elegido con cabeza.</h1>
+          <p class="hero__lead">Autos usados revisados uno por uno, con financiación y la posibilidad de entregar tu usado como parte de pago.</p>
+          <div class="hero__actions">
+            <a class="btn btn--accent" href="#autos">Ver autos destacados</a>
+            <a class="btn btn--ghost" href="#asistente">¿Cuál me conviene?</a>
+          </div>
+          <div class="hero__facts">
+            <div><strong>Revisión previa</strong>Antes de cada venta</div>
+            <div><strong>Financiación</strong>Bancaria o de la casa</div>
+            <div><strong>Permuta</strong>Tomamos tu usado</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Autos destacados -->
+    <section class="section" id="autos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Autos destacados</span>
+          <h2>Algunos de los autos que tenemos hoy</h2>
+          <p>El stock cambia todas las semanas. Si buscás algo puntual, preguntanos y te avisamos cuando entre.</p>
+        </div>
+        <div class="cars">
+          <article class="car card reveal" data-tipo="compacto" id="auto-compacto">
+            <div class="car__img"><img src="https://images.unsplash.com/photo-1643142314913-0cf633d9bbb5?auto=format&fit=crop&w=900&q=70" alt="Auto compacto rojo en salón de ventas" loading="lazy"><span class="chip">Compacto</span></div>
+            <div class="car__body">
+              <h3>Hatchback 5 puertas</h3>
+              <ul class="car__specs"><li>2021</li><li>Manual</li><li>Nafta</li><li>48.000 km</li></ul>
+              <p>Ideal para la ciudad: fácil de estacionar y de bajo consumo.</p>
+              <ul class="car__tags"><li>Aire acondicionado</li><li>Bluetooth</li><li>Único dueño</li></ul>
+              <a class="btn btn--line btn--block" data-wa="Hola, me interesa el hatchback 5 puertas 2021 que vi en la web. ¿Sigue disponible?"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg> Consultar por este auto</a>
+            </div>
+          </article>
+          <article class="car card reveal" data-tipo="sedan" id="auto-sedan">
+            <div class="car__img"><img src="https://images.unsplash.com/photo-1783740486439-b4487fad649f?auto=format&fit=crop&w=900&q=70" alt="Sedán azul en salón de ventas" loading="lazy"><span class="chip">Sedán</span></div>
+            <div class="car__body">
+              <h3>Sedán ejecutivo</h3>
+              <ul class="car__specs"><li>2020</li><li>Automático</li><li>Nafta</li><li>62.000 km</li></ul>
+              <p>Cómodo en ruta, con baúl amplio y andar silencioso.</p>
+              <ul class="car__tags"><li>Control crucero</li><li>Cámara de retroceso</li><li>Service al día</li></ul>
+              <a class="btn btn--line btn--block" data-wa="Hola, me interesa el sedán ejecutivo 2020 que vi en la web. ¿Sigue disponible?"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg> Consultar por este auto</a>
+            </div>
+          </article>
+          <article class="car card reveal" data-tipo="suv" id="auto-suv">
+            <div class="car__img"><img src="https://images.unsplash.com/photo-1615887110697-0819ec23465f?auto=format&fit=crop&w=900&q=70" alt="SUV blanca estacionada al aire libre" loading="lazy"><span class="chip">SUV</span></div>
+            <div class="car__body">
+              <h3>SUV familiar</h3>
+              <ul class="car__specs"><li>2022</li><li>Automática</li><li>Diésel</li><li>35.000 km</li></ul>
+              <p>Espacio para toda la familia y para el equipaje de las vacaciones.</p>
+              <ul class="car__tags"><li>Pantalla táctil</li><li>Sensores de estacionamiento</li><li>Garantía</li></ul>
+              <a class="btn btn--line btn--block" data-wa="Hola, me interesa la SUV familiar 2022 que vi en la web. ¿Sigue disponible?"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg> Consultar por este auto</a>
+            </div>
+          </article>
+        </div>
+        <p class="cars__more reveal">¿Buscás otro modelo? <a data-wa="Hola, estoy buscando un auto y quería saber qué tienen disponible.">Preguntanos qué tenemos disponible</a></p>
+      </div>
+    </section>
+
+    <!-- Asistente -->
+    <section class="section section--alt" id="asistente">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Asistente</span>
+          <h2>¿Qué auto te conviene?</h2>
+          <p>Respondé tres preguntas y te decimos qué tipo de auto se adapta mejor a tu día a día.</p>
+        </div>
+        <div class="quiz reveal">
+          <div class="quiz__steps">
+            <div class="quiz__q" data-pregunta="uso">
+              <h3><span>1</span> ¿Dónde lo vas a usar más?</h3>
+              <div class="choices">
+                <button class="choice" type="button" aria-pressed="false" data-valor="ciudad">En la ciudad</button>
+                <button class="choice" type="button" aria-pressed="false" data-valor="ruta">En ruta</button>
+                <button class="choice" type="button" aria-pressed="false" data-valor="mixto">Un poco de todo</button>
+              </div>
+            </div>
+            <div class="quiz__q" data-pregunta="personas">
+              <h3><span>2</span> ¿Cuántos viajan normalmente?</h3>
+              <div class="choices">
+                <button class="choice" type="button" aria-pressed="false" data-valor="pocos">1 o 2</button>
+                <button class="choice" type="button" aria-pressed="false" data-valor="familia">3 o 4</button>
+                <button class="choice" type="button" aria-pressed="false" data-valor="muchos">5 o más, o mucha carga</button>
+              </div>
+            </div>
+            <div class="quiz__q" data-pregunta="prioridad">
+              <h3><span>3</span> ¿Qué es lo más importante para vos?</h3>
+              <div class="choices">
+                <button class="choice" type="button" aria-pressed="false" data-valor="consumo">Que gaste poco</button>
+                <button class="choice" type="button" aria-pressed="false" data-valor="confort">Que sea cómodo</button>
+                <button class="choice" type="button" aria-pressed="false" data-valor="espacio">Que tenga espacio</button>
+              </div>
+            </div>
+          </div>
+          <div class="quiz__result" data-resultado aria-live="polite">
+            <div class="quiz__progress"><span data-progreso></span></div>
+            <div data-resultado-vacio>
+              <p class="quiz__hint">Respondé las tres preguntas para ver la recomendación.</p>
+              <p class="quiz__count" data-faltan>Faltan 3 respuestas</p>
+            </div>
+            <div data-resultado-lleno hidden>
+              <span class="eyebrow">Te recomendamos</span>
+              <h3 data-res-titulo></h3>
+              <p data-res-texto></p>
+              <div class="quiz__actions">
+                <a class="btn btn--accent" href="#autos" data-res-ver>Ver el auto destacado</a>
+                <a class="btn btn--wa" href="#" data-res-wa target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg> Consultar</a>
+              </div>
+              <button class="quiz__reset" type="button" data-reiniciar>Empezar de nuevo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financiación -->
+    <section class="section" id="financiacion">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Financiación</span>
+          <h2>Tres formas de llevártelo</h2>
+          <p>Se pueden combinar: por ejemplo, entregar tu usado y financiar el resto.</p>
+        </div>
+        <div class="plans">
+          <article class="plan card reveal">
+            <span class="plan__num">01</span>
+            <h3>Crédito bancario</h3>
+            <p>Gestionamos el crédito con el banco por vos, en pesos o en dólares.</p>
+            <ul><li>Cédula de identidad</li><li>Comprobante de ingresos</li><li>Constancia de domicilio</li></ul>
+            <a class="btn btn--line btn--block" data-wa="Hola, quiero consultar por financiación con crédito bancario.">Consultar</a>
+          </article>
+          <article class="plan plan--featured card reveal">
+            <span class="plan__num">02</span>
+            <h3>Financiación de la casa</h3>
+            <p>Una entrega inicial y el resto en cuotas fijas con nosotros, sin trámites bancarios.</p>
+            <ul><li>Cédula de identidad</li><li>Recibo de sueldo o constancia de ingresos</li><li>Entrega inicial</li></ul>
+            <a class="btn btn--accent btn--block" data-wa="Hola, quiero consultar por la financiación de la casa.">Consultar</a>
+          </article>
+          <article class="plan card reveal">
+            <span class="plan__num">03</span>
+            <h3>Tu usado como parte de pago</h3>
+            <p>Traelo, lo tasamos en el momento y lo descontamos del precio.</p>
+            <ul><li>Libreta de propiedad</li><li>Patente al día</li><li>El auto, para revisarlo</li></ul>
+            <a class="btn btn--line btn--block" data-wa="Hola, quiero entregar mi usado como parte de pago. Les paso los datos:">Consultar</a>
+          </article>
+        </div>
+        <p class="plans__note reveal">Las condiciones de cada opción (entrega, plazo y tasa) dependen del auto y de cada caso. Consultá las condiciones vigentes.</p>
+      </div>
+    </section>
+
+    <!-- Visitanos -->
+    <section class="section section--alt" id="visitanos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Visitanos</span>
+          <h2>Vení a verlos y a probarlos</h2>
+          <p>Todos los autos están en el local para que los veas de cerca. Si querés probar uno en particular, avisanos antes y te lo dejamos listo.</p>
+        </div>
+        <div class="visit">
+          <div class="visit__info reveal">
+            <h3>Altamar Automotores</h3>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Dirección</strong><span>Ciudad de la Costa, Canelones</span></div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <div>
+                <strong>Horarios</strong>
+                <ul class="hours" data-horarios></ul>
+                <span class="status" data-estado></span>
+              </div>
+            </div>
+            <div class="visit__actions">
+              <a class="btn btn--accent" href="https://www.google.com/maps/dir/?api=1&destination=Ciudad+de+la+Costa%2C+Canelones%2C+Uruguay" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 19-9-9 19-2-8-8-2Z"/></svg> Cómo llegar</a>
+              <a class="btn btn--line" data-wa="Hola, quiero ir a ver autos. ¿En qué horario me pueden atender?"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg> Avisanos que venís</a>
+            </div>
+          </div>
+          <div class="map reveal">
+            <iframe title="Mapa de Ciudad de la Costa, Canelones" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Ciudad+de+la+Costa%2C+Canelones%2C+Uruguay&z=14&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contacto</span>
+          <h2>¿Querés que te asesoremos?</h2>
+          <p>Contanos qué estás buscando y con cuánto contás. Te respondemos con las opciones que tenemos.</p>
+        </div>
+        <div class="contact">
+          <div class="contact__cards reveal">
+            <a class="contact-card contact-card--wa" data-wa="Hola, quiero consultar por un auto.">
+              <span class="contact-card__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg></span>
+              <span><strong>WhatsApp</strong><span>La forma más rápida de hablarnos</span></span>
+            </a>
+            <a class="contact-card" data-tel>
+              <span class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+              <span><strong data-tel-texto></strong><span>Llamanos en horario de atención</span></span>
+            </a>
+            <a class="contact-card" data-mail>
+              <span class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+              <span><strong>Correo</strong><span data-mail-texto></span></span>
+            </a>
+          </div>
+
+          <form class="form reveal" id="form-contacto" novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="f-nombre">Nombre</label>
+                <input id="f-nombre" name="Nombre" type="text" autocomplete="given-name" data-regla="nombre" maxlength="40" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-apellido">Apellido</label>
+                <input id="f-apellido" name="Apellido" type="text" autocomplete="family-name" data-regla="apellido" maxlength="40" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-correo">Correo electrónico</label>
+                <input id="f-correo" name="Correo electrónico" type="email" autocomplete="email" data-regla="correo" maxlength="80" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="f-telefono">Teléfono</label>
+                <input id="f-telefono" name="Teléfono" type="tel" autocomplete="tel" inputmode="tel" data-regla="telefono" maxlength="20" placeholder="099 123 456" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field field--full">
+                <label for="f-tipo">Tipo de consulta</label>
+                <select id="f-tipo" name="Tipo de consulta" data-regla="tipo" required>
+                  <option value="">Elegí una opción</option>
+                  <option>Consulta por un auto</option>
+                  <option>Financiación</option>
+                  <option>Entregar mi usado</option>
+                  <option>Otra consulta</option>
+                </select>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field field--full">
+                <label for="f-mensaje">Mensaje</label>
+                <textarea id="f-mensaje" name="Mensaje" data-regla="mensaje" maxlength="1000" required></textarea>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+            </div>
+            <label class="hp" aria-hidden="true"><input type="checkbox" name="botcheck" tabindex="-1"></label>
+            <div class="form__foot">
+              <p class="form__note">Te respondemos al correo que nos dejes.</p>
+              <button class="btn btn--accent" type="submit">Enviar consulta</button>
+            </div>
+            <div class="form__status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="#inicio">
+            <img class="brand__mark" src="img/logo.svg" alt="">
+            <span class="brand__name">Altamar Automotores<small>Autos usados</small></span>
+          </a>
+          <p>Autos usados seleccionados, financiación y permuta en Ciudad de la Costa.</p>
+        </div>
+        <div>
+          <h4>Secciones</h4>
+          <ul><li><a href="#autos">Autos</a></li><li><a href="#asistente">¿Cuál me conviene?</a></li><li><a href="#financiacion">Financiación</a></li><li><a href="#visitanos">Visitanos</a></li><li><a href="#contacto">Contacto</a></li></ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a data-wa="Hola, quiero consultar por un auto.">WhatsApp</a></li>
+            <li><a data-mail></a></li>
+            <li>Ciudad de la Costa, Canelones</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__demo">
+        <span class="footer__demo-tag">Proyecto de muestra</span>
+        Altamar Automotores es un comercio ficticio: el nombre, el logo, los precios y los datos son inventados para mostrar el trabajo de
+        <a href="mailto:metherisstudios@gmail.com">Metheris Studios</a>. El WhatsApp y el formulario llegan a Metheris Studios.
+        Fotos de Unsplash (Portafolio fotográfico automotriz, Crosby Hinze, Myron Mott, Vlad Kutepov). © <span data-anio></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa="Hola, quiero consultar por un auto." aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.81 0-1.33.7-1.99.95-2.26.24-.27.53-.34.71-.34h.51c.16 0 .38-.06.6.46.23.54.77 1.87.84 2.01.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.88.27.13.45.2.51.31.07.11.07.65-.17 1.33Z"/></svg></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

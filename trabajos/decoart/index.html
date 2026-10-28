@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DecoArt | Carteles pintados a mano en Marindia</title>
+  <meta name="description" content="DecoArt es un emprendimiento familiar de Marindia, Canelones. Carteles de MDP pintados a mano con stencil, con frases lindas y colores alegres. Pedidos personalizados y velas de miel.">
+  <meta name="theme-color" content="#2B2140">
+  <meta property="og:title" content="DecoArt | Carteles pintados a mano">
+  <meta property="og:description" content="Carteles de MDP pintados a mano con stencil, hechos en familia en Marindia. Armá el tuyo y pedilo por WhatsApp.">
+  <meta property="og:image" content="img/logo-decoart.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="preload" href="css/fonts/stardos-stencil-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="css/fonts/nunito-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+  <!-- Íconos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.41Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 19.5h14"/></symbol>
+    <symbol id="i-brush" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.5 3.5 20.5 9.5 12 18l-6-6zM6 12l-2.6 2.6a3 3 0 0 0 0 4.2l1 .9-2 2.3h4.2a3 3 0 0 0 2-.9L12 18"/></symbol>
+  </svg>
+
+  <!-- Defs para el efecto de pintura en la vista previa del cartel -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="pintura" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.12" numOctaves="3" seed="7" result="ruido"/>
+      <feDisplacementMap in="SourceGraphic" in2="ruido" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <!-- Pantalla de entrada: la paleta se arma -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__stage">
+      <span class="intro__dot" style="--c:#E04A2F;--x:-38vw;--y:-30vh;--d:0s"></span>
+      <span class="intro__dot" style="--c:#7DC94E;--x:34vw;--y:-34vh;--d:.06s"></span>
+      <span class="intro__dot" style="--c:#F6C944;--x:-42vw;--y:22vh;--d:.12s"></span>
+      <span class="intro__dot" style="--c:#C062DE;--x:40vw;--y:26vh;--d:.18s"></span>
+      <span class="intro__dot" style="--c:#6E87BF;--x:4vw;--y:-44vh;--d:.24s"></span>
+      <span class="intro__dot" style="--c:#FF8A3D;--x:-6vw;--y:42vh;--d:.30s"></span>
+      <span class="intro__dot" style="--c:#CFC53A;--x:-30vw;--y:-2vh;--d:.36s"></span>
+      <img class="intro__logo" src="img/logo-decoart.webp" alt="" width="831" height="574">
+    </div>
+    <div class="intro__stripes">
+      <i style="--c:#F6C944"></i><i style="--c:#FF8A3D"></i><i style="--c:#6EC6E8"></i><i style="--c:#EE7BB0"></i><i style="--c:#7DC94E"></i><i style="--c:#C062DE"></i><i style="--c:#E04A2F"></i>
+    </div>
+  </div>
+
+  <a class="skip" href="#productos">Saltar al contenido</a>
+
+  <header class="header" id="top">
+    <div class="header__in">
+      <a class="brand" href="#top" aria-label="DecoArt, ir al inicio">
+        <img src="img/logo-chico.webp" alt="DecoArt" width="240" height="166">
+      </a>
+      <nav class="nav" id="nav" aria-label="Secciones">
+        <a href="#productos">Productos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#arma-tu-cartel">Armá tu cartel</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn--wa btn--sm header__wa" data-wa="Hola DecoArt! Quería hacerles una consulta." href="#contacto" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PORTADA -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__photo" aria-hidden="true"></div>
+      <div class="hero__strokes" aria-hidden="true">
+        <span class="stroke s1"></span><span class="stroke s2"></span><span class="stroke s3"></span>
+      </div>
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="hero__kicker"><svg aria-hidden="true"><use href="#i-pin"/></svg>Emprendimiento familiar de Marindia, Canelones</p>
+          <h1 id="hero-title">Carteles pintados a mano, con frases que alegran la casa</h1>
+          <p class="hero__lead">Pintamos carteles de MDP con pinceladas de colores y frases hechas con stencil. Elegí una frase de nuestra colección y pedila con los colores que más te gusten.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#arma-tu-cartel"><svg aria-hidden="true"><use href="#i-brush"/></svg>Armá tu cartel</a>
+            <a class="btn btn--wa" data-wa="Hola DecoArt! Vi la web y quiero encargar un cartel." href="#contacto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir por WhatsApp</a>
+          </div>
+        </div>
+        <div class="hero__wall" aria-label="Algunos de nuestros carteles">
+          <div class="rail" aria-hidden="true"></div>
+          <figure class="hang hang--a"><img src="img/cartel-home-franjas.webp" alt="Cartel Home sweet home con franjas de colores" width="923" height="932" fetchpriority="high"></figure>
+          <figure class="hang hang--b"><img src="img/cartel-si-puedes-sonarlo.webp" alt="Cartel con la frase Si puedes soñarlo puedes hacerlo" width="912" height="946" fetchpriority="high"></figure>
+          <figure class="hang hang--c"><img src="img/cartel-sigue-creciendo.webp" alt="Cartel Sigue creciendo con flores pintadas" width="936" height="930"></figure>
+        </div>
+      </div>
+      <div class="ribbon" aria-hidden="true">
+        <div class="ribbon__track">
+          <span style="--c:#6EC6E8">Amar, soñar, reír</span><span style="--c:#F6C944">Home sweet home</span><span style="--c:#EE7BB0">Disfruta cada momento</span><span style="--c:#9BDD72">Sigue creciendo</span><span style="--c:#FFB070">En esta casa hay amor del bueno</span><span style="--c:#C9A4F0">Si puedes soñarlo puedes hacerlo</span>
+          <span style="--c:#6EC6E8">Amar, soñar, reír</span><span style="--c:#F6C944">Home sweet home</span><span style="--c:#EE7BB0">Disfruta cada momento</span><span style="--c:#9BDD72">Sigue creciendo</span><span style="--c:#FFB070">En esta casa hay amor del bueno</span><span style="--c:#C9A4F0">Si puedes soñarlo puedes hacerlo</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="section" id="productos" aria-labelledby="productos-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="productos-title"><span class="paint" style="--c:#F6C944">Lo que hacemos</span></h2>
+          <p>Todo pintado a mano, uno por uno. Por eso cada pieza queda única.</p>
+        </header>
+        <div class="products">
+          <article class="product" style="--c:#EE7BB0">
+            <div class="product__img"><img src="img/cartel-love.webp" alt="Cartel LOVE con pinceladas rosa, amarilla y celeste y flores rojas" width="918" height="942" loading="lazy"></div>
+            <div class="product__body">
+              <h3>Carteles con frases</h3>
+              <p>Cuadrados y rectangulares, con cordón para colgar. Frases lindas y motivadoras sobre fondos de colores.</p>
+              <a class="link-wa" data-wa="Hola DecoArt! Quiero consultar por los carteles con frases." href="#contacto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar</a>
+            </div>
+          </article>
+          <article class="product" style="--c:#6EC6E8">
+            <div class="product__img"><img src="img/colgante-sonar-amar-reir.webp" alt="Colgante de tres tablitas con las palabras Soñar, Amar y Reír" width="921" height="937" loading="lazy"></div>
+            <div class="product__body">
+              <h3>Colgantes de tres tablitas</h3>
+              <p>Una frase repartida en tres tablas unidas, para puertas, paredes y rincones especiales.</p>
+              <a class="link-wa" data-wa="Hola DecoArt! Quiero consultar por los colgantes de tres tablitas." href="#contacto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar</a>
+            </div>
+          </article>
+          <article class="product" style="--c:#C9A4F0">
+            <div class="product__img"><img src="img/cartel-redondo-amar.webp" alt="Cartel redondo rosa con las palabras Amar, Soñar y Reír" width="552" height="549" loading="lazy"></div>
+            <div class="product__body">
+              <h3>Carteles redondos</h3>
+              <p>Un formato distinto, ideal para regalar. Con flores, corazones y detalles pintados.</p>
+              <a class="link-wa" data-wa="Hola DecoArt! Quiero consultar por los carteles redondos." href="#contacto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar</a>
+            </div>
+          </article>
+          <article class="product" style="--c:#F6C944">
+            <div class="product__img"><img src="img/velas-de-miel.webp" alt="Canasta con velas de miel en bolsitas y tarjetas con frases" width="920" height="943" loading="lazy"></div>
+            <div class="product__body">
+              <h3>Velas de miel</h3>
+              <p>Además de carteles, hacemos velas de miel. Quedan hermosas para regalar junto a un cartel.</p>
+              <a class="link-wa" data-wa="Hola DecoArt! Quiero consultar por las velas de miel." href="#contacto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar</a>
+            </div>
+          </article>
+        </div>
+        <div class="custom-band">
+          <p><strong>¿Lo querés con tus colores?</strong> Elegí la frase entre nuestros stencils, la forma y los colores, y te lo pintamos.</p>
+          <a class="btn btn--primary" href="#arma-tu-cartel"><svg aria-hidden="true"><use href="#i-brush"/></svg>Armá tu cartel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section section--tint" id="galeria" aria-labelledby="galeria-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="galeria-title"><span class="paint" style="--c:#6EC6E8">Nuestra pared de carteles</span></h2>
+          <p>Tocá cualquier foto para verla en grande.</p>
+        </header>
+        <div class="gallery">
+          <button class="gallery__feature" data-index="0" aria-label="Ver foto: exhibidor de carteles en una feria">
+            <img src="img/exhibidor-feria.webp" alt="Exhibidor de madera lleno de carteles de colores en una feria" width="690" height="911" loading="lazy">
+            <span class="gallery__caption">Así llevamos los carteles a cada feria</span>
+          </button>
+          <div class="gallery__grid">
+            <button data-index="1" style="--r:-2deg"><img src="img/cartel-love-perfil.webp" alt="Cartel LOVE pintado a mano, visto de costado" width="902" height="959" loading="lazy"></button>
+            <button data-index="2" style="--r:1.5deg"><img src="img/cartel-la-vida-momentos.webp" alt="Cartel La vida no se mide en minutos, se mide en momentos, sobre unas rocas frente al mar" width="928" height="947" loading="lazy"></button>
+            <button data-index="3" style="--r:-1deg"><img src="img/cartel-home-verde.webp" alt="Cartel verde Home sweet home con un rombo amarillo" width="934" height="937" loading="lazy"></button>
+            <button data-index="4" style="--r:2deg"><img src="img/colgante-en-esta-casa.webp" alt="Colgante En esta casa hay amor del bueno, con fondo en espiral de colores" width="700" height="956" loading="lazy"></button>
+            <button data-index="5" style="--r:1deg"><img src="img/colgante-disfruta.webp" alt="Colgante Disfruta cada momento en celeste, amarillo y rosa" width="903" height="959" loading="lazy"></button>
+            <button data-index="6" style="--r:-1.5deg"><img src="img/cartel-home-franjas.webp" alt="Cartel Home sweet home con franjas amarillas, naranjas y celestes" width="923" height="932" loading="lazy"></button>
+            <button data-index="7" style="--r:2deg"><img src="img/cartel-sigue-creciendo.webp" alt="Cartel Sigue creciendo con mariposas y flores" width="936" height="930" loading="lazy"></button>
+            <button data-index="8" style="--r:-2deg"><img src="img/cartel-si-puedes-sonarlo.webp" alt="Cartel Si puedes soñarlo puedes hacerlo" width="912" height="946" loading="lazy"></button>
+          </div>
+        </div>
+        <p class="gallery__more">Hay muchos más en nuestro Instagram: <a href="https://www.instagram.com/decoart_facusofi/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>@decoart_facusofi</a></p>
+      </div>
+    </section>
+
+    <!-- ARMÁ TU CARTEL -->
+    <section class="section maker-sec" id="arma-tu-cartel" aria-labelledby="maker-title">
+      <div class="wrap">
+        <header class="sec-head">
+          <h2 id="maker-title"><span class="paint" style="--c:#EE7BB0">Armá tu cartel</span></h2>
+          <p>Elegí la frase, la forma y tus colores. Te mostramos cómo quedaría y nos mandás el pedido por WhatsApp.</p>
+        </header>
+        <div class="maker">
+          <form class="maker__controls" id="maker" onsubmit="return false" aria-label="Diseñador de cartel">
+            <fieldset>
+              <legend>Frase <small>Son los stencils que tenemos</small></legend>
+              <div class="chips chips--frases" id="frases"></div>
+            </fieldset>
+            <fieldset>
+              <legend>Forma</legend>
+              <div class="chips" data-group="forma">
+                <label><input type="radio" name="forma" value="cuadrado" checked><span>Cuadrado</span></label>
+                <label><input type="radio" name="forma" value="rectangular"><span>Rectangular</span></label>
+                <label><input type="radio" name="forma" value="redondo"><span>Redondo</span></label>
+                <label><input type="radio" name="forma" value="colgante"><span>Colgante de 3 tablitas</span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Fondo</legend>
+              <div class="chips" data-group="fondo">
+                <label><input type="radio" name="fondo" value="pinceladas" checked><span>Pinceladas</span></label>
+                <label><input type="radio" name="fondo" value="franjas"><span>Franjas</span></label>
+                <label><input type="radio" name="fondo" value="liso"><span>Un solo color</span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Colores <small id="colores-ayuda">Elegí hasta 3</small></legend>
+              <div class="swatches" id="swatches" aria-describedby="colores-ayuda"></div>
+            </fieldset>
+            <fieldset>
+              <legend>Color de letra</legend>
+              <div class="inks" id="inks"></div>
+            </fieldset>
+          </form>
+
+          <div class="maker__preview">
+            <div class="preview-wall" id="preview" aria-live="polite">
+              <!-- se dibuja con JS -->
+            </div>
+            <div class="maker__actions">
+              <a class="btn btn--wa" id="maker-wa" href="#contacto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir este cartel por WhatsApp</a>
+              <button class="btn btn--ghost" type="button" id="maker-img"><svg aria-hidden="true"><use href="#i-down"/></svg><span>Guardar imagen</span></button>
+            </div>
+            <p class="preview-note">La vista previa es una idea: cada cartel se pinta a mano y queda único. El mensaje lleva un link a tu diseño, y si querés podés guardar la imagen para mandarla en el chat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section section--tint" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="wrap about">
+        <div class="about__story">
+          <h2 id="nosotros-title"><span class="paint" style="--c:#9BDD72">Hecho en familia</span></h2>
+          <p>DecoArt es nuestro emprendimiento familiar de Marindia, Canelones. Pintamos carteles de MDP a mano, con stencil y mucho color, para que cada casa tenga una frase que la represente.</p>
+          <ol class="steps">
+            <li style="--c:#F6C944"><strong>La base</strong><span>Tablas de MDP listas para pintar.</span></li>
+            <li style="--c:#EE7BB0"><strong>El fondo</strong><span>Pinceladas de colores a mano.</span></li>
+            <li style="--c:#6EC6E8"><strong>La frase</strong><span>Letra por letra, con stencil.</span></li>
+            <li style="--c:#9BDD72"><strong>Los detalles</strong><span>Flores, corazones y el colgante.</span></li>
+          </ol>
+          <div class="fairs">
+            <h3>Nos encontrás en ferias y eventos</h3>
+            <p>Vamos con el exhibidor a ferias y fiestas de la zona y del interior, como en Minas y en Tala. Las próximas fechas las avisamos en Instagram.</p>
+            <a class="btn btn--ghost" href="https://www.instagram.com/decoart_facusofi/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Ver próximas ferias</a>
+          </div>
+        </div>
+        <div class="about__map">
+          <div class="map-frame">
+            <iframe title="Mapa de Marindia, Canelones" src="https://www.google.com/maps?q=Marindia,+Canelones,+Uruguay&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="map-info">
+            <p><svg aria-hidden="true"><use href="#i-pin"/></svg><span><strong>Marindia, Canelones</strong><br>Si no nos cruzás en una feria, escribinos y coordinamos.</span></p>
+            <a class="btn btn--wa btn--sm" data-wa="Hola DecoArt! Quiero coordinar para conseguir un cartel." href="#contacto" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Coordinar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact">
+        <div class="contact__side">
+          <h2 id="contacto-title"><span class="paint" style="--c:#FFB070">Escribinos</span></h2>
+          <p>La forma más rápida es WhatsApp. Si preferís, dejanos tu consulta en el formulario y te respondemos por mail.</p>
+          <a class="contact-card contact-card--wa" data-wa="Hola DecoArt! Quería hacerles una consulta." href="#contacto" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>
+            <span><strong>WhatsApp</strong><span class="wa-number">Escribinos</span></span>
+          </a>
+          <a class="contact-card contact-card--ig" href="https://www.instagram.com/decoart_facusofi/" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-ig"/></svg>
+            <span><strong>Instagram</strong><span>@decoart_facusofi</span></span>
+          </a>
+        </div>
+
+        <form class="form" id="form-contacto" novalidate>
+          <input type="hidden" name="access_key" id="w3f-key">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form__row">
+            <div class="field">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" name="Nombre" type="text" autocomplete="given-name" maxlength="40" required>
+              <p class="field__error" id="e-nombre"></p>
+            </div>
+            <div class="field">
+              <label for="f-apellido">Apellido</label>
+              <input id="f-apellido" name="Apellido" type="text" autocomplete="family-name" maxlength="40" required>
+              <p class="field__error" id="e-apellido"></p>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="f-correo">Correo electrónico</label>
+              <input id="f-correo" name="Correo electrónico" type="email" autocomplete="email" maxlength="80" required>
+              <p class="field__error" id="e-correo"></p>
+            </div>
+            <div class="field">
+              <label for="f-telefono">Teléfono</label>
+              <input id="f-telefono" name="Teléfono" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" placeholder="09X XXX XXX" required>
+              <p class="field__error" id="e-telefono"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-tipo">Tipo de consulta</label>
+            <select id="f-tipo" name="Tipo de consulta" required>
+              <option value="">Elegí una opción</option>
+              <option>Cartel de la colección</option>
+              <option>Cartel con mis colores</option>
+              <option>Colgante de tres tablitas</option>
+              <option>Velas de miel</option>
+              <option>Otra consulta</option>
+            </select>
+            <p class="field__error" id="e-tipo"></p>
+          </div>
+          <div class="field">
+            <label for="f-mensaje">Mensaje</label>
+            <textarea id="f-mensaje" name="Mensaje" rows="4" maxlength="800" placeholder="Contanos qué cartel te gustaría, la frase y los colores" required></textarea>
+            <p class="field__error" id="e-mensaje"></p>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit" id="f-enviar"><svg aria-hidden="true"><use href="#i-mail"/></svg><span>Enviar consulta</span></button>
+          <p class="form__status" id="f-estado" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <div class="footer__brand">
+        <img src="img/logo-chico.webp" alt="DecoArt" width="240" height="166" loading="lazy">
+        <p>Carteles de MDP pintados a mano con stencil.<br>Emprendimiento familiar de Marindia, Canelones.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Secciones del pie">
+        <a href="#productos">Productos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#arma-tu-cartel">Armá tu cartel</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer__social">
+        <a data-wa="Hola DecoArt! Quería hacerles una consulta." href="#contacto" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+        <a href="https://www.instagram.com/decoart_facusofi/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      </div>
+    </div>
+    <div class="footer__bottom wrap">
+      <p>© <span id="anio">2026</span> DecoArt</p>
+      <p>Web hecha por Metheris Studios</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-float" data-wa="Hola DecoArt! Quiero encargar un cartel." href="#contacto" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <!-- Visor de fotos -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <button class="lightbox__close" aria-label="Cerrar">×</button>
+    <button class="lightbox__nav lightbox__prev" aria-label="Foto anterior">‹</button>
+    <figure><img src="" alt=""><figcaption></figcaption></figure>
+    <button class="lightbox__nav lightbox__next" aria-label="Foto siguiente">›</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
